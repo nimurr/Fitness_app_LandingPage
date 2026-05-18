@@ -1,0 +1,4 @@
+nano /etc/nginx/sites-available/fitness-app
+
+
+ls -la /var/www/fitness/landing
