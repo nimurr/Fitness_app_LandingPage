@@ -1,4 +1,34 @@
 nano /etc/nginx/sites-available/fitness-app
 
+======================= for Ladning Page ======================
 
-ls -la /var/www/fitness/landing
+1. Go to your project folder
+
+cd /var/www/fitness/landing
+
+2. Check current status (optional but good)
+git status
+
+3. Always sync with GitHub (IMPORTANT FIX STEP)
+
+git fetch --all
+git reset --hard origin/main
+
+4. If permissions issue happens (rare)
+
+git config --global --add safe.directory /var/www/fitness/landing
+
+
+5. If it is React / Vite project (IMPORTANT)
+
+
+ls
+
+
+6. Fix ownership (good practice)
+
+sudo chown -R www-data:www-data /var/www/fitness/landing
+
+7. Restart Nginx
+
+sudo systemctl restart nginx
